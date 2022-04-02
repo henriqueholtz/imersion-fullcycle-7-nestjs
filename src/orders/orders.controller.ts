@@ -19,7 +19,7 @@ export class OrdersController {
 
   @Post()
   create(
-    @Body(new ValidationPipe({ errorHttpStatusCode: 422 }))
+    @Body()
     createOrderDto: CreateOrderDto,
   ) {
     return this.ordersService.create(createOrderDto);
